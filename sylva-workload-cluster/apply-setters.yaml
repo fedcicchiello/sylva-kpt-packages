@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: apply-setters-config
+  annotations:
+    config.kubernetes.io/local-config: "true"
+data:
+  clusterName: example
+  sylvaCoreUrl: https://gitlab.com/sylva-projects/sylva-core.git
+  sylvaCoreBranch: main
+  k8sVersion: v1.27.3
+  bootstrapProvider: cabpk
+  svcCIDR: 10.128.0.0/12
+  podCIDR: 192.168.0.0/16
+  httpProxy: ""
+  httpsProxy: ""
+  noProxy: ""
