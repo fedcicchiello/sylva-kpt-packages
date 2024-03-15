@@ -2,7 +2,6 @@ apiVersion: config.porch.kpt.dev/v1alpha1
 kind: PackageVariant
 metadata:
   name: example-repo
-  namespace: default
 spec:
   annotations:
     approval.nephio.org/policy: initial
@@ -21,6 +20,3 @@ spec:
     - image: gcr.io/kpt-fn/set-annotations:v0.1.4
       configMap:
         nephio.org/cluster-name: example
-    - image: gcr.io/kpt-fn/set-namespace:v0.4.1
-      configMap:
-        namespace: example # kpt-set: ${clusterName}

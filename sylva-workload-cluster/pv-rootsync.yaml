@@ -2,7 +2,6 @@ apiVersion: config.porch.kpt.dev/v1alpha1
 kind: PackageVariant
 metadata:
   name: example-rootsync
-  namespace: default
 spec:
   annotations:
     approval.nephio.org/policy: initial
